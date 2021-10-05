@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team.파전App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="area.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="area.js"></script>
+    <!-- <script type="text/javaScript">
+        function login(){
+             location.href = "/login.html";
+        }
+    </script> -->                <!--서버 생성후 버튼 원클릭과 세트로 바꿀것-->
+        
+</head>
+<body>
+    <h1>파전과 막걸리 게임<br>(식단&운동 관리 애플리케이션)</h1>
+    <!--메인화면-->
+    <div id="grid">
+        <div id="article">
+            <h2>
+                <ul>
+                <li><a class="active" href="index.html">HOME</a></li>
+                <li><a href="menu.html">식단관리</a></li>
+                <li><a href="fitness.html">운동관리</a></li>
+                </ul>
+            </h2>
+        </div>    
+        
+        <figure class="snip1200">
+            <img src="salad.jpg" alt="sq-sample27" width="440" />
+            <figcaption>
+              <p>맛있는 배달음식을 먹는순간! 우리는 기분이 up되지만 한편으로는 우리 몸속에서의 소화효소들은 down을 외치고 있죠. 그런 분들의 영양을 책임지기 위해 왔습니다! </p>
+              <div class="heading">
+                <h2>오늘의<span> 식단</span></h2>
+              </div>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+
+          <figure class="snip1200">
+            <img src="running.jpg" alt="sq-sample32" width="500"/>
+            <figcaption>
+              <p>살을 빼고 싶어 운동을 해야겠다고 마음먹은 당신! 하지만 어디서부터 어떻게 운동해야할지 고민이시라고요? 걱정마세요 저희가 해결해드리겠습니다! </p>
+              <div class="heading">
+                <h2>오늘의 <span> 운동</span></h2>
+              </div>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+    </div>
+    <!-- <button type="button" onclick="login();">참가 하시겠습니까?</button> -->
+    <p><br><button onclick="document.getElementById('id01').style.display='block'">참가 하시겠습니까?</button></p>
+    <!-- <p><img src="salad.jpg" width="300"><img src="fitness.jpg" width="450"><br></p> -->
+
+    <!--로그인 화면-->
+    <div id="id01" class="modal">
+      
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="barbell.jpg" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <br><br><br><button type="submit" class="lgn">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <br><br><button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+      
+      <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
+</body>
+</html>
